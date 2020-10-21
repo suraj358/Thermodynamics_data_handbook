@@ -54,11 +54,6 @@
     <div id="variables">
         <div class="variable">
             <div class="varname"align="left">
-                <!--&lt;!&ndash;                <p  style="font-size:96%;"><b>Saturated water</b></p><br>&ndash;&gt;-->
-                <!--                <input type="radio" id="a"/><lable><b>Saturated water</b></p></lable><br>-->
-
-                <!--&lt;!&ndash;                <p style="font-size:95%;">Pressure(m<sup>3</sup>/kg)</p><br>&ndash;&gt;-->
-                <!--                <input type="radio"/><lable><b>Pressure(m<sup>3</sup>/kg)</b></p></lable><br>-->
 
                 <input name="featured_ad" value="1" type="radio"  onclick="resetradio(this);enabled"><b>SATURATED WATER</b>
                 <div class="buttons">
@@ -104,13 +99,9 @@
                             <option value="4">30</option>
                         </select><br>
 
-                        <!--                    <div class="varname">-->
-                        <!--			    <p style="font-size:95%;">Temperature(<sup>o</sup>C)</p><br>-->
-                        <!--                        <input type="radio"/><lable><b>Temperature(<sup>o</sup>C)</b></p></lable><br>-->
                         <input type="radio" name="ad_pack_id1" value="red"  onclick="setcheckbox1();enabled"><b>Temperature(<sup>o</sup>C)</b><br>
 
                         <select id="vsuper" class="red box" name="type"  onchange="check4(this.value);enabled">
-                            <!--                                style = "color:black" enabled>-->
                             <option value="select" ></option>
                             <option value="1">400</option>
                             <option value="2">600</option>
@@ -118,7 +109,6 @@
                             <option value="4">1100</option>
                         </select>
                         <br>
-                        <!--                         <p  style="font-size:96%;">Mass=4kg</p><br> -->
                     </div>
                 </div>
                 </b>
@@ -179,14 +169,14 @@
             context.drawImage(img, 5, -250);
             document.getElementById("vsat").value = 1;
             draw();
-            document.getElementById("p1").innerHTML="Pressure(P) = 160kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 80L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = -15.60<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.157";
+            document.getElementById("p1").innerHTML="Pressure(P) = 15 kPa";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) =";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =64.2kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=0.628kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.0775 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
 
         }
         else if(value == 2)
@@ -198,14 +188,14 @@
             context.drawImage(img, 5, -842);
             document.getElementById("vsat").value = 2;
             draw1();
-            document.getElementById("p1").innerHTML="Pressure(P) = 320kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 160L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 2.46<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.624";
+            document.getElementById("p1").innerHTML="Pressure(P) = 375 kPa";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =177.907kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=2.496kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.158 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
         else if(value == 3)
         {
@@ -216,14 +206,14 @@
             context.drawImage(img, 5, -1043);
             document.getElementById("vsat").value = 3;
             draw2();
-            document.getElementById("p1").innerHTML="Pressure(P) = 400kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 200L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 8.91<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.975";
+            document.getElementById("p1").innerHTML="Pressure(P) = 700 kPa";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =250.951kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=3.904kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.1998 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
         else if(value == 4)
         {
@@ -234,14 +224,14 @@
             context.drawImage(img, 5, -1202);
             document.getElementById("vsat").value = 4;
             draw2();
-            document.getElementById("p1").innerHTML="Pressure(P) = 400kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 200L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 8.91<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.975";
+            document.getElementById("p1").innerHTML="Pressure(P) = 1000 kPa";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =250.951kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=3.904kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.1998 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
         else if(value == 5)
         {
@@ -252,14 +242,14 @@
             context.drawImage(img, 5, -1777);
             document.getElementById("vsat").value = 5;
             draw2();
-            document.getElementById("p1").innerHTML="Pressure(P) = 400kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 200L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 8.91<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.975";
+            document.getElementById("p1").innerHTML="Pressure(P) = 13,000 kPa";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =250.951kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=3.904kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.1998 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
         else if(value == 6)
         {
@@ -270,14 +260,14 @@
             context.drawImage(img, 5, -2040);
             document.getElementById("vsat").value = 6;
             draw2();
-            document.getElementById("p1").innerHTML="Pressure(P) = 400kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 200L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 8.91<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.975";
+            document.getElementById("p1").innerHTML="Pressure(P) = 22,064 kPa";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =250.951kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=3.904kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.1998 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
     }
     function draw() {
@@ -360,14 +350,14 @@
             context.drawImage(img, 5, 26);
             document.getElementById("vsat").value = 1;
             draw111();
-            document.getElementById("p1").innerHTML="Pressure(P) = 160kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 80L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = -15.60<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.157";
+            document.getElementById("p1").innerHTML="Temperature(T) = 0.01 (<sup>o</sup>C)";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =64.2kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=0.628kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.0775 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
 
         }
         else if(value == 2)
@@ -379,14 +369,14 @@
             context.drawImage(img, 5, -305);
             document.getElementById("vsat").value = 2;
             draw112();
-            document.getElementById("p1").innerHTML="Pressure(P) = 320kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 160L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 2.46<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.624";
+            document.getElementById("p1").innerHTML="Temperature(T) = 50 (<sup>o</sup>C)";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =177.907kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=2.496kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.158 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
         else if(value == 3)
         {
@@ -397,14 +387,14 @@
             context.drawImage(img, 5, -668);
             document.getElementById("vsat").value = 3;
             draw113();
-            document.getElementById("p1").innerHTML="Pressure(P) = 400kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 200L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 8.91<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.975";
+            document.getElementById("p1").innerHTML="Temperature(T) = 120 (<sup>o</sup>C)";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =250.951kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=3.904kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.1998 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
         else if(value == 4)
         {
@@ -415,14 +405,14 @@
             context.drawImage(img, 5, -1080);
             document.getElementById("vsat").value = 4;
             draw113();
-            document.getElementById("p1").innerHTML="Pressure(P) = 400kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 200L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 8.91<sup>o</sup>C";
+            document.getElementById("p1").innerHTML="Temperature(T) = 200 (<sup>o</sup>C)";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) =";
             document.getElementById("p4").innerHTML="Quality(x) =0.975";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =250.951kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=3.904kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.1998 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
         else if(value == 5)
         {
@@ -433,14 +423,14 @@
             context.drawImage(img, 5, -1466);
             document.getElementById("vsat").value = 5;
             draw113();
-            document.getElementById("p1").innerHTML="Pressure(P) = 400kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 200L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 8.91<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.975";
+            document.getElementById("p1").innerHTML="Temperature(T) = 275 (<sup>o</sup>C)";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =250.951kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=3.904kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.1998 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
         else if(value == 6)
         {
@@ -451,14 +441,14 @@
             context.drawImage(img, 5, -1985);
             document.getElementById("vsat").value = 6;
             draw113();
-            document.getElementById("p1").innerHTML="Pressure(P) = 400kPa";
-            document.getElementById("p2").innerHTML="volume(v) = 200L";
-            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = 8.91<sup>o</sup>C";
-            document.getElementById("p4").innerHTML="Quality(x) =0.975";
+            document.getElementById("p1").innerHTML="Temperature(T) = 373.95(<sup>o</sup>C)";
+            document.getElementById("p2").innerHTML="volume(v) = ";
+            document.getElementById("p3").innerHTML="Temperature(T<sub>sat</sub>) = ";
+            document.getElementById("p4").innerHTML="Quality(x) =";
 
-            document.getElementById("p11").innerHTML="Enthalpy(h) =250.951kJ/kg";
-            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm=3.904kg ";
-            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=0.1998 m<sup>3</sup>";
+            document.getElementById("p11").innerHTML="Enthalpy(h) =";
+            document.getElementById("p22").innerHTML="Mass of vapour (m<sub>g</sub>)=xm= ";
+            document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
     }
 
