@@ -53,7 +53,7 @@
         <div class="variable">
             <div class="varname"align="left">
 
-                <input name="featured_ad" value="1" type="radio"  onclick="resetradio(this);enabled"><b>SATURATED WATER</b>
+                <input name="featured_ad" value="1" type="checkbox"  onclick="resetradio(this);enabled"><b>SATURATED WATER</b>
                 <div class="buttons">
                     <input type="radio" name="ad_pack_id" value="blue" id="yes" onclick="setcheckbox();enabled"><b>Pressure(m<sup>3</sup>/kg)</b>
 
@@ -85,13 +85,13 @@
                 </div>
                 <br>
                 <div class="varname">
-                    <input name="featured_ad1" value="1" type="radio" onclick="resetradio1(this);disabled"><b>SUPERHEATED WATER</b>
+                    <input name="featured_ad1" value="1" type="checkbox" onclick="resetradio1(this);disabled"><b>SUPERHEATED WATER</b>
                     <div class="buttons1">
                         <input type="radio" name="ad_pack_id1" value="red" onclick="setcheckbox1();enabled"><b>Pressure(MPa)</b><br>
 
                         <select id="psuper" class="red box" name="type"  onchange="check3(this.value);enabled">
-                            <option value="select" disabled selected id="select4" enabled >select</option>
-                            <option value="1">0.3 MPa</option>
+                            <option value="select" disabled selected id="select3" enabled >select</option>
+                            <option value="1.a">0.3 MPa</option>
                             <option value="2">1.8 MPa</option>
                             <option value="3">7 MPa</option>
                             <option value="4">30 MPa</option>
@@ -100,11 +100,11 @@
                         <input type="radio" name="ad_pack_id1" value="red"  onclick="setcheckbox1();enabled"><b>Temperature(<sup>o</sup>C)</b><br>
 
                         <select id="vsuper" class="red box" name="type"  onchange="check4(this.value);enabled">
-                            <option value="select" ></option>
-                            <option value="1">400</option>
-                            <option value="2">600</option>
-                            <option value="3">800</option>
-                            <option value="4">1100</option>
+                            <option value="select" disabled selected id="select4" enabled >select</option>
+                            <option value="1.a">400</option>
+                            <option value="1.a">600</option>
+                            <option value="1.a">800</option>
+                            <option value="1.a">1100</option>
                         </select>
                         <br>
                     </div>
@@ -554,14 +554,98 @@
         }
     }
 
-
-
-
     //superheated water
-    function check3(value)
-    {
-        if (value == 1)
-        {
+    // Pressure
+    function check3(value) {
+        if (value == 1) {
+            // alert("hi 1");
+            var canvas = document.getElementById('simscreen');
+            var context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            var img = document.getElementById("image1");
+            context.drawImage(img, -380, -80);
+            document.getElementById("psuper").value = 1;
+
+
+        } else if (value == 2) {
+            var canvas = document.getElementById('simscreen');
+            var context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            var img = document.getElementById("image1");
+            context.drawImage(img, -380, -570);
+            document.getElementById("psuper").value = 2;
+            // draw01();
+            // document.getElementById("p1").innerHTML = "Pressure = 8.0MPa";
+            // document.getElementById("p2").innerHTML = "h = 3273.3 kJ/kg";x
+            // document.getElementById("p3").innerHTML = "T = 450<sup>o</sup>C";
+            // document.getElementById("p4").innerHTML = "u = 0.038194 m<sup>3</sup>/kg";
+            //
+            // document.getElementById("p11").innerHTML = "v = 0.038194*4=0.152776 m<sup>3</sup>";
+            // document.getElementById("p22").innerHTML="s=6.5579  kJ/kg/K";
+            // document.getElementById("p33").innerHTML=" null";
+        } else if (value == 3) {
+            var canvas = document.getElementById('simscreen');
+            var context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            var img = document.getElementById("image1");
+            context.drawImage(img, -380, -1040);
+            document.getElementById("psuper").value = 3;
+            // draw02();
+            // document.getElementById("p1").innerHTML = "Pressure = 17.5 MPa";
+            // document.getElementById("p2").innerHTML = "h = 3561.3 kJ/kg";
+            // document.getElementById("p3").innerHTML = "T = 600<sup>o</sup>C";
+            // document.getElementById("p4").innerHTML = "u = 0.021073 m<sup>3</sup>/kg";
+            //
+            // document.getElementById("p11").innerHTML = "v = 0.021073*4=0.084292 m<sup>3</sup>";
+            // document.getElementById("p22").innerHTML=" s=6.5890  kJ/kg/K";
+            // document.getElementById("p33").innerHTML=" null";
+        } else if (value == 4) {
+            var canvas = document.getElementById('simscreen');
+            var context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            var img = document.getElementById("image1");
+            context.drawImage(img, -380, -1475);
+            document.getElementById("psuper").value = 4;
+            // draw03();
+            // document.getElementById("p1").innerHTML = "Pressure = 17.5 MPa";
+            // document.getElementById("p2").innerHTML = "h = 3561.3 kJ/kg";
+            // document.getElementById("p3").innerHTML = "T = 600<sup>o</sup>C";
+            // document.getElementById("p4").innerHTML = "u = 0.021073 m<sup>3</sup>/kg";
+            //
+            // document.getElementById("p11").innerHTML = "v = 0.021073*4=0.084292 m<sup>3</sup>";
+            // document.getElementById("p22").innerHTML=" s=6.5890  kJ/kg/K";
+            // document.getElementById("p33").innerHTML=" null";
+        } else {
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Temperature
+
+    function check4(value) {
+        if (value == 1) {
             // alert("hi 1");
             var canvas = document.getElementById('simscreen');
             var context = canvas.getContext('2d');
@@ -569,7 +653,7 @@
             var img = document.getElementById("image1");
             context.drawImage(img, -380, -80);
             document.getElementById("vsuper").value = 1;
-            draw0();
+            draw00();
             // document.getElementById("p1").innerHTML = "Pressure = 0.5MPa";
             // document.getElementById("p2").innerHTML = "h = 2961 kJ/kg";
             // document.getElementById("p3").innerHTML = "T = 250<sup>o</sup>C";
@@ -578,16 +662,17 @@
             // document.getElementById("p11").innerHTML = "v = 0.47443*4=1.89772 m<sup>3</sup>";
             // document.getElementById("p22").innerHTML="s=7.2725 kJ/kg/K";
             // document.getElementById("p33").innerHTML=" null";
-        }
-        else if (value == 2)
-        {
+
+
+        } else if (value == 2) {
             var canvas = document.getElementById('simscreen');
             var context = canvas.getContext('2d');
             context.clearRect(0, 0, canvas.width, canvas.height);
             var img = document.getElementById("image1");
-            context.drawImage(img, -380, -570);
+            // context.drawImage(img, -380, -570);
+            context.drawImage(img, -380, -130);
             document.getElementById("vsuper").value = 2;
-            draw01();
+            draw010();
             // document.getElementById("p1").innerHTML = "Pressure = 8.0MPa";
             // document.getElementById("p2").innerHTML = "h = 3273.3 kJ/kg";
             // document.getElementById("p3").innerHTML = "T = 450<sup>o</sup>C";
@@ -596,16 +681,16 @@
             // document.getElementById("p11").innerHTML = "v = 0.038194*4=0.152776 m<sup>3</sup>";
             // document.getElementById("p22").innerHTML="s=6.5579  kJ/kg/K";
             // document.getElementById("p33").innerHTML=" null";
-        }
-        else if (value == 3)
-        {
+        } else if (value == 3) {
             var canvas = document.getElementById('simscreen');
             var context = canvas.getContext('2d');
             context.clearRect(0, 0, canvas.width, canvas.height);
             var img = document.getElementById("image1");
-            context.drawImage(img, -380, -1040);
+            // context.drawImage(img, -380, -1040);
+            context.drawImage(img, -380, -180);
+
             document.getElementById("vsuper").value = 3;
-            draw02();
+            draw020();
             // document.getElementById("p1").innerHTML = "Pressure = 17.5 MPa";
             // document.getElementById("p2").innerHTML = "h = 3561.3 kJ/kg";
             // document.getElementById("p3").innerHTML = "T = 600<sup>o</sup>C";
@@ -614,16 +699,16 @@
             // document.getElementById("p11").innerHTML = "v = 0.021073*4=0.084292 m<sup>3</sup>";
             // document.getElementById("p22").innerHTML=" s=6.5890  kJ/kg/K";
             // document.getElementById("p33").innerHTML=" null";
-        }
-        else if (value == 4)
-        {
+        } else if (value == 4) {
             var canvas = document.getElementById('simscreen');
             var context = canvas.getContext('2d');
             context.clearRect(0, 0, canvas.width, canvas.height);
             var img = document.getElementById("image1");
-            context.drawImage(img, -380, -1475);
+            // context.drawImage(img, -380, -1475);
+            context.drawImage(img, -380, -258);
+
             document.getElementById("vsuper").value = 4;
-            draw03();
+            draw030();
             // document.getElementById("p1").innerHTML = "Pressure = 17.5 MPa";
             // document.getElementById("p2").innerHTML = "h = 3561.3 kJ/kg";
             // document.getElementById("p3").innerHTML = "T = 600<sup>o</sup>C";
@@ -632,77 +717,10 @@
             // document.getElementById("p11").innerHTML = "v = 0.021073*4=0.084292 m<sup>3</sup>";
             // document.getElementById("p22").innerHTML=" s=6.5890  kJ/kg/K";
             // document.getElementById("p33").innerHTML=" null";
-        }
-        else
-        {}
-
-        function draw0(){
-            // context.beginPath();
-            // context.lineWidth = 2;
-            // context.strokeStyle = "red";
-            // context.fillStyle = "yellow";
-            // // Turn transparency on
-            // context.rect(70, 245, 60, 25);
-            // context.stroke();
-            // context.globalAlpha = 0.2;
-            // context.fill();
-            // context.globalAlpha = 1;
-            // displayTextAbove(225, 240);
-
-            context.beginPath();
-            context.lineWidth = 2;
-            context.strokeStyle = "green";
-            context.fillStyle = "yellow";
-            // Turn transparency on
-            context.rect(110, 245, 370, 25);
-            context.stroke();
-            context.globalAlpha = 0.2;
-            context.fill();
-            context.globalAlpha = 1;
-            displayTextAbove(225, 240);
-
-        }
-        function draw01() {
-
-            // context.beginPath();
-            // context.lineWidth = 2;
-            // context.strokeStyle = "red";
-            // context.fillStyle = "yellow";
-            // // Turn transparency on
-            // context.rect(70, 245, 60, 25);
-            // context.stroke();
-            // context.globalAlpha = 0.2;
-            // context.fill();
-            // context.globalAlpha = 1;
-            // displayTextAbove(225, 240);
-
-            context.beginPath();
-            context.lineWidth = 2;
-            context.strokeStyle = "green";
-            context.fillStyle = "yellow";
-            // Turn transparency on
-            context.rect(110, 245, 370, 25);
-            context.stroke();
-            context.globalAlpha = 0.2;
-            context.fill();
-            context.globalAlpha = 1;
-            displayTextAbove(225, 240);
-
+        } else {
         }
 
-        function draw02() {
-            // context.beginPath();
-            // context.lineWidth = 2;
-            // context.strokeStyle = "red";
-            // context.fillStyle = "yellow";
-            // // Turn transparency on
-            // context.rect(70, 245, 60, 25);
-            // context.stroke();
-            // context.globalAlpha = 0.2;
-            // context.fill();
-            // context.globalAlpha = 1;
-            // displayTextAbove(225, 240);
-
+        function draw00() {
             context.beginPath();
             context.lineWidth = 2;
             context.strokeStyle = "green";
@@ -715,18 +733,34 @@
             context.globalAlpha = 1;
             displayTextAbove(225, 240);
         }
-        function draw03() {
-            // context.beginPath();
-            // context.lineWidth = 2;
-            // context.strokeStyle = "red";
-            // context.fillStyle = "yellow";
-            // // Turn transparency on
-            // context.rect(70, 245, 60, 25);
-            // context.stroke();
-            // context.globalAlpha = 0.2;
-            // context.fill();
-            // context.globalAlpha = 1;
-            // displayTextAbove(225, 240);
+        function draw010() {
+            context.beginPath();
+            context.lineWidth = 2;
+            context.strokeStyle = "blue";
+            context.fillStyle = "yellow";
+            // Turn transparency on
+            context.rect(110, 245, 370, 25);
+            context.stroke();
+            context.globalAlpha = 0.2;
+            context.fill();
+            context.globalAlpha = 1;
+            displayTextAbove1(225, 240);
+        }
+        function draw020() {
+            context.beginPath();
+            context.lineWidth = 2;
+            context.strokeStyle = "red";
+            context.fillStyle = "yellow";
+            // Turn transparency on
+            context.rect(110, 245, 370, 25);
+            context.stroke();
+            context.globalAlpha = 0.2;
+            context.fill();
+            context.globalAlpha = 1;
+            displayTextAbove2(225, 240);
+        }
+
+        function draw030() {
 
             context.beginPath();
             context.lineWidth = 2;
@@ -738,18 +772,10 @@
             context.globalAlpha = 0.2;
             context.fill();
             context.globalAlpha = 1;
-            displayTextAbove(225, 240);
+            displayTextAbove3(225, 240);
         }
 
         function displayTextAbove(rectTop, textTop) {
-            // context.beginPath();
-            // context.lineWidth = 2;
-            // context.strokeStyle = "black";
-            // context.fillStyle = "yellow";
-            // context.rect(70, rectTop, 60, 20);
-            // context.fill();
-            // context.stroke();
-
             context.beginPath();
             context.lineWidth = 2;
             context.strokeStyle = "black";
@@ -757,23 +783,6 @@
             context.rect(110, rectTop, 370, 20);
             context.fill();
             context.stroke();
-
-            // context.fillStyle = "black";
-            // Turn transparency on
-            // context.fillText("P(kPa)", 35, textTop);
-            // context.fillText("Temp", 90, textTop);
-            // context.fillText("u kJ/kg", 225, textTop);
-            // context.fillText("h kJ/kg", 310, textTop);
-            // context.fillText("s kJ/kg.K", 390, textTop);
-            // context.stroke();
-
-            // context.beginPath();
-            // context.lineWidth = 2;
-            // context.strokeStyle = "red";
-            // context.fillStyle = "yellow";
-            // context.rect(540, rectTop, 360, 20);
-            // context.fill();
-            // context.stroke();
 
             context.fillStyle = "black";
             // Turn transparency on
@@ -783,12 +792,74 @@
             context.fillText("h kJ/kg", 330, textTop);
             context.fillText("s kJ/kg.K", 410, textTop);
             context.stroke();
+        }
+        function displayTextAbove1(rectTop, textTop) {
+            context.beginPath();
+            context.lineWidth = 2;
+            context.strokeStyle = "black";
+            context.fillStyle = "yellow";
+            context.rect(110, rectTop, 370, 20);
+            context.fill();
+            context.stroke();
 
+            context.fillStyle = "black";
+            // Turn transparency on
+            // context.fillText("P(kPa)", 35, textTop);
+            context.fillText("v m³kg", 140, textTop);
+            context.fillText("u kJ/kg", 230, textTop);
+            context.fillText("h kJ/kg", 330, textTop);
+            context.fillText("s kJ/kg.K", 410, textTop);
+            context.stroke();
+        }
+        function displayTextAbove2(rectTop, textTop) {
+            context.beginPath();
+            context.lineWidth = 2;
+            context.strokeStyle = "black";
+            context.fillStyle = "yellow";
+            context.rect(110, rectTop, 370, 20);
+            context.fill();
+            context.stroke();
 
+            context.fillStyle = "black";
+            // Turn transparency on
+            // context.fillText("P(kPa)", 35, textTop);
+            context.fillText("v m³kg", 140, textTop);
+            context.fillText("u kJ/kg", 230, textTop);
+            context.fillText("h kJ/kg", 330, textTop);
+            context.fillText("s kJ/kg.K", 410, textTop);
+            context.stroke();
+        }
+        function displayTextAbove3(rectTop, textTop) {
+            context.beginPath();
+            context.lineWidth = 2;
+            context.strokeStyle = "black";
+            context.fillStyle = "yellow";
+            context.rect(110, rectTop, 370, 20);
+            context.fill();
+            context.stroke();
+
+            context.fillStyle = "black";
+            // Turn transparency on
+            // context.fillText("P(kPa)", 35, textTop);
+            context.fillText("v m³kg", 140, textTop);
+            context.fillText("u kJ/kg", 230, textTop);
+            context.fillText("h kJ/kg", 330, textTop);
+            context.fillText("s kJ/kg.K", 410, textTop);
+            context.stroke();
         }
     }
+
     $(document).ready(function(){
         $('input[type="radio"]').click(function(){
+            var inputValue = $(this).attr("value");
+            var targetBox = $("." + inputValue);
+            $(".box").not(targetBox).hide();
+            $(targetBox).show();
+        });
+    });
+
+    $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
             var inputValue = $(this).attr("value");
             var targetBox = $("." + inputValue);
             $(".box").not(targetBox).hide();
