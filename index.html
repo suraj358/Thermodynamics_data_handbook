@@ -565,10 +565,10 @@
             color: "red",
             temperatures: [
                 // { val:0},
-                {id: 1, val: 400, xcord: 110, ycord: 716},
-                {id: 2, val: 600, xcord: 110, ycord: 765},
-                {id: 3, val: 800, xcord: 110, ycord: 818},
-                {id: 4, val: 1100, xcord: 110, ycord: 890},
+                {id: 1, val: 400, xcord: 100, ycord: 716},
+                {id: 2, val: 600, xcord: 100, ycord: 765},
+                {id: 3, val: 800, xcord: 100, ycord: 818},
+                {id: 4, val: 1100, xcord: 100, ycord: 890},
             ]
         },
         {
@@ -577,10 +577,10 @@
             color: "blue",
             temperatures: [
                 // {val:0},
-                {id: 1, val: 400, xcord: 110, ycord: 1100},
-                {id: 2, val: 600, xcord: 110, ycord: 1200},
-                {id: 3, val: 800, xcord: 110, ycord: 1250},
-                {id: 4, val: 1100, xcord: 110, ycord: 1334},
+                {id: 1, val: 400, xcord: 100, ycord: 1100},
+                {id: 2, val: 600, xcord: 100, ycord: 1200},
+                {id: 3, val: 800, xcord: 100, ycord: 1250},
+                {id: 4, val: 1100, xcord: 100, ycord: 1334},
             ]
         },
         {
@@ -589,10 +589,10 @@
             color: "red",
             temperatures: [
                 // { id:0,val:0},
-                {id: 1, val: 400, xcord: 110, ycord: 1490},
-                {id: 2, val: 600, xcord: 110, ycord: 1613},
-                {id: 3, val: 800, xcord: 110, ycord: 1690},
-                {id: 4, val: 1100, xcord: 110, ycord: 1765},
+                {id: 1, val: 400, xcord: 100, ycord: 1490},
+                {id: 2, val: 600, xcord: 100, ycord: 1613},
+                {id: 3, val: 800, xcord: 100, ycord: 1690},
+                {id: 4, val: 1100, xcord: 100, ycord: 1765},
             ]
         },
     ];
@@ -637,7 +637,7 @@
         ctx.beginPath();
         ctx.lineWidth = 3;
         ctx.strokeStyle = dataSet[pressureIndexSet].color;
-        ctx.rect(x,y,360,-30);
+        ctx.rect(x,y,370,-30);
         // ctx.fill();
         // ctx.fillText('Pressure: '+dataSet[pressureIndexSet].pressure+', Temperature: '+dataSet[pressureIndexSet].temperatures[index-1].val+', x: '+x+', y: '+y, x,y-10);
         ctx.stroke();
