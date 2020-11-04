@@ -110,14 +110,14 @@
                         <div   onclick="setcheckbox1();"><b>Pressure(MPa)</b><br></div>
                         <div class="pressure">
                             <select name="" id="pressure" onchange="displayTemperature(this.value)">
-                                <option value="">Select Pressure</option>
+                                <option value="">Select</option>
                             </select>
                         </div>
                         <div  onclick="setcheckbox1();"><b>Temperature(<sup>o</sup>C)</b><br>
                         </div>
                         <div class="temperature">
                             <select name="" id="temperature" onchange="drawBox(this.value)">
-                                <option value="">Select Temperature</option>
+                                <option value="">Select</option>
                             </select>
                         </div>
                         <br>
@@ -284,7 +284,7 @@
     }
     function draw() {
         context.beginPath();
-        context.lineWidth = 2;
+        context.lineWidth = 3;
         context.strokeStyle = "green";
         context.fillStyle = "yellow";
         // Turn transparency on
@@ -298,7 +298,7 @@
     //p:320 v:160
     function draw1() {
         context.beginPath();
-        context.lineWidth = 2;
+        context.lineWidth = 3;
         context.strokeStyle = "green";
         context.fillStyle = "yellow";
         context.rect(10, 170, 1230, 25);
@@ -311,7 +311,7 @@
     //p:500 v:200
     function draw2() {
         context.beginPath();
-        context.lineWidth = 2;
+        context.lineWidth = 3;
         context.strokeStyle = "green";
         context.fillStyle = "yellow";
         context.rect(10, 165, 1230, 25);
@@ -323,7 +323,7 @@
     }
     function displayTextAbove(rectTop,textTop){
         context.beginPath();
-        context.lineWidth = 2;
+        context.lineWidth = 3;
         context.strokeStyle = "black";
         context.fillStyle = "yellow";
         context.rect(10, rectTop, 1230, 20);
@@ -550,7 +550,7 @@
         {
             id: 1,
             pressure: '0.3MPa',
-            color: "red",
+            color: "green",
             temperatures: [
                 // { val:0},
                 {id: 1, val: 400, xcord: 110, ycord: 270},
@@ -562,7 +562,7 @@
         {
             id: 2,
             pressure: '1.8MPa',
-            color: "red",
+            color: "green",
             temperatures: [
                 // { val:0},
                 {id: 1, val: 400, xcord: 100, ycord: 716},
@@ -574,7 +574,7 @@
         {
             id: 3,
             pressure: '7MPa',
-            color: "blue",
+            color: "green",
             temperatures: [
                 // {val:0},
                 {id: 1, val: 400, xcord: 100, ycord: 1100},
@@ -586,7 +586,7 @@
         {
             id: 4,
             pressure: '30MPa',
-            color: "red",
+            color: "green",
             temperatures: [
                 // { id:0,val:0},
                 {id: 1, val: 400, xcord: 100, ycord: 1490},
@@ -634,13 +634,45 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         var img = document.getElementById("image1");
         ctx.drawImage(img, -380, -80);
+//rect 1
         ctx.beginPath();
         ctx.lineWidth = 3;
         ctx.strokeStyle = dataSet[pressureIndexSet].color;
+        ctx.strokeStyle = "green";
+        ctx.fillStyle = "yellow";
         ctx.rect(x,y,370,-30);
+        ctx.globalAlpha = 0.2;
+        ctx.fill();
+        ctx.globalAlpha = 1;
         // ctx.fill();
         // ctx.fillText('Pressure: '+dataSet[pressureIndexSet].pressure+', Temperature: '+dataSet[pressureIndexSet].temperatures[index-1].val+', x: '+x+', y: '+y, x,y-10);
         ctx.stroke();
+        ctx.closePath();
+
+//rect2
+        ctx.beginPath();
+        ctx.lineWidth = 2;
+        // ctx.strokeStyle = dataSet[pressureIndexSet].color;
+        ctx.strokeStyle = "black";
+        ctx.fillStyle = "yellow";
+        ctx.rect(x,y-29,370,-20);
+        // ctx.globalAlpha = 0.2;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.fill();
+        // ctx.fillText('Pressure: '+dataSet[pressureIndexSet].pressure+', Temperature: '+dataSet[pressureIndexSet].temperatures[index-1].val+', x: '+x+', y: '+y, x,y-20);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle = "black";
+        ctx.fillStyle = "red";
+        ctx.fillText("T(°C)",y-10, 370);
+        // ctx.fillText('Pressure: '+dataSet[pressureIndexSet].pressure+', Temperature: '+dataSet[pressureIndexSet].temperatures[index-1].val+', x: '+x+', y: '+y, x,y-30);
+        ctx.stroke();
+        ctx.closePath();
+
+
     }
 
 
