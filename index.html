@@ -282,6 +282,21 @@
             document.getElementById("p33").innerHTML="Volume of vapour (V<sub>g</sub>)=m<sub>g</sub>v<sub>g</sub>=";
         }
     }
+
+    // if(document.getElementById('radio').checked)
+    // {
+    //     document.getElementById('yes').style.visibility = 'hidden';
+    //     // document.getElementById('check1').style.visibility = 'hidden';
+    //     // document.getElementById('check3').style.visibility = 'hidden';
+    //     // document.getElementById('simscreen').style.visibility = 'visible';
+    // }
+    // else
+    // {
+    //     document.getElementById('vast').style.visibility = 'hidden';
+    // }
+
+
+
     function draw() {
         context.beginPath();
         context.lineWidth = 3;
@@ -323,7 +338,7 @@
     }
     function displayTextAbove(rectTop,textTop){
         context.beginPath();
-        context.lineWidth = 3;
+        context.lineWidth = 2;
         context.strokeStyle = "black";
         context.fillStyle = "yellow";
         context.rect(10, rectTop, 1230, 20);
@@ -466,7 +481,7 @@
 
     function draw111() {
         context.beginPath();
-        context.lineWidth = 2;
+        context.lineWidth = 3;
         context.strokeStyle = "green";
         context.fillStyle = "yellow";
         // Turn transparency on
@@ -480,7 +495,7 @@
     //p:320 v:160
     function draw112() {
         context.beginPath();
-        context.lineWidth = 2;
+        context.lineWidth = 3;
         context.strokeStyle = "green";
         context.fillStyle = "yellow";
         context.rect(10, 170, 1230, 25);
@@ -493,7 +508,7 @@
     //p:500 v:200
     function draw113() {
         context.beginPath();
-        context.lineWidth = 2;
+        context.lineWidth = 3;
         context.strokeStyle = "green";
         context.fillStyle = "yellow";
         context.rect(10, 165, 1230, 25);
@@ -601,10 +616,10 @@
     var pressures = "";
     // var canvas = document.getElementById("canvas");
     // var context = canvas.getContext("2d");
-    var canvas = document.getElementById('simscreen');
-    var context = canvas.getContext('2d');
-    var img = document.getElementById("image1");
-    context.drawImage(img, -380, -80);
+    // var canvas = document.getElementById('simscreen');
+    // var context = canvas.getContext('2d');
+    // var img = document.getElementById("image1");
+    // context.drawImage(img, -380, -80);
     context.beginPath();
 
     dataSet.forEach(function(ele,index){
@@ -629,6 +644,7 @@
         var y = dataSet[pressureIndexSet].temperatures[index-1].ycord;
         // var canvas = document.getElementById("canvas");
         // var ctx = canvas.getContext("2d");
+
         var canvas = document.getElementById('simscreen');
         var context = canvas.getContext('2d');
         // context.clearRect(0,0,500,500);
@@ -681,7 +697,7 @@
     }
 
     function displayTextAbove00(rectTop,textTop) {
-        context.fillStyle = "red";
+        context.fillStyle = "black";
         // Turn transparency on
         context.fillText("v m3/kg", 130, textTop);
         context.fillText("u kJ/kg", 230, textTop);
@@ -689,6 +705,44 @@
         context.fillText("s kJ/kg", 425, textTop);
         context.stroke();
 
+    }
+
+    function resetradio (checkbox) {
+        var buttons = document.querySelector('.buttons');
+        var radios = document.getElementsByName('ad_pack_id');
+        radios[0] = true;
+        if (checkbox.checked == true) {
+            buttons.style.display = 'block';
+        }
+        else {
+            buttons.style.display = 'none';
+        }
+    }
+
+    function setcheckbox () {
+        var checkbox = document.getElementsByName('featured_ad')[0];
+        if (checkbox.checked == false) {
+            checkbox.checked = true;
+        }
+    }
+
+    function resetradio1 (checkbox1) {
+        var buttons1 = document.querySelector('.buttons1');
+        var radios = document.getElementsByName('ad_pack_id1');
+        radios[0] = true;
+        if (checkbox1.checked == true) {
+            buttons1.style.display = 'block';
+        }
+        else {
+            buttons1.style.display = 'none';
+        }
+    }
+
+    function setcheckbox1 () {
+        var checkbox1 = document.getElementsByName('featured_ad1')[0];
+        if (checkbox1.checked == false) {
+            checkbox1.checked = true;
+        }
     }
 
 
@@ -755,9 +809,6 @@
     //     }
     // }
 
-
-
-
     $(document).ready(function(){
         $('input[type="radio"]').click(function(){
             var inputValue = $(this).attr("value");
@@ -775,43 +826,7 @@
             $(targetBox).show();
         });
     });
-    function resetradio (checkbox) {
-        var buttons = document.querySelector('.buttons');
-        var radios = document.getElementsByName('ad_pack_id');
-        radios[0] = true;
-        if (checkbox.checked == true) {
-            buttons.style.display = 'block';
-        }
-        else {
-            buttons.style.display = 'none';
-        }
-    }
 
-    function setcheckbox () {
-        var checkbox = document.getElementsByName('featured_ad')[0];
-        if (checkbox.checked == false) {
-            checkbox.checked = true;
-        }
-    }
-
-    function resetradio1 (checkbox1) {
-        var buttons1 = document.querySelector('.buttons1');
-        var radios = document.getElementsByName('ad_pack_id1');
-        radios[0] = true;
-        if (checkbox1.checked == true) {
-            buttons1.style.display = 'block';
-        }
-        else {
-            buttons1.style.display = 'none';
-        }
-    }
-
-    function setcheckbox1 () {
-        var checkbox1 = document.getElementsByName('featured_ad1')[0];
-        if (checkbox1.checked == false) {
-            checkbox1.checked = true;
-        }
-    }
 </script>
 </body>
 </html>
