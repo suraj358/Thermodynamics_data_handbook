@@ -146,7 +146,7 @@ div#commentboxleft
 	width: 280px;
 	color: #e7722b;
 	text-align: left;
-	font-size: 15px;
+	font-size: 12px;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
@@ -158,12 +158,12 @@ div#commentboxright
 	border-left-style: dotted;
 	position:absolute;
 	left:313px;
-	top: 490px;
+	top: 485px;
 	height: 35px;
 	width: 280px;
 	color: #e7722b;
 	text-align: left;
-	font-size: 15px;
+	font-size: 12px;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
